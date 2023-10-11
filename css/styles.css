@@ -1,0 +1,196 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: logo;
+  src: url('./fonts/Brave.ttf');
+}
+
+@font-face {
+  font-family: regular;
+  src: url('./fonts/Montserrat-Regular.ttf');
+}
+
+@font-face {
+  font-family: boldblack;
+  src: url('./fonts/Montserrat-Black.ttf');
+}
+
+@font-face {
+  font-family: medium;
+  src: url('./fonts/Montserrat-Medium.ttf');
+}
+
+@font-face {
+  font-family: semibold;
+  src: url('./fonts/Montserrat-SemiBold.ttf');
+}
+
+body {
+  font-family: regular;
+  background: url('../images/bg1.png');
+  color: white;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+
+p {
+  text-align: left;
+  line-height: 70px;
+  margin-bottom:70px;
+}
+
+
+
+
+.navbar {
+  text-transform: uppercase;
+
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  background: linear-gradient(90deg, rgba(2, 0, 36, 0.1) 0%, rgba(0,22,81,0.1) 100%);
+  padding: 20px;
+  top: 0;
+  left:0;
+  right:0;
+  margin: 0 auto 0 auto;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.5s, border-radius 0.5s, width 0.5s, box-shadow 0.5s, background 0.1s;
+}
+
+.scrolled {
+  transform: translateY(30%);
+  background: linear-gradient(90deg, rgba(0,2,30, 0.97) 0%, rgba(5,12,61,0.97) 100%);
+  width: 80%;
+  border-radius: 50px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+  transition: transform 0.5s, border-radius 0.5s, width 0.5s, box-shadow 0.5s, background 0.5s;
+}
+
+.navbar a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 15px;
+  line-height: 25px;
+  transition: color 0.5s;
+  font-family: semibold;
+  letter-spacing: 2px;
+}
+
+.navbar-center a {
+  text-decoration: none;
+  color: white;
+  background-image: linear-gradient(white,white);
+  background-size: 0 2px, auto;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  transition: all .3s ease-out;
+}
+
+.navbar-center a:hover {
+  background-size: 50% 2px, auto;
+  color: #bbbbbb;
+}
+
+.navbar-center a.active {
+  background-size: 50% 2px, auto;
+  color: #bbbbbb;
+}
+
+
+.navbar .logo {
+  font-family: logo;
+  font-size: 35px;
+  font-weight: bold;
+  transition: 0.4s;
+}
+
+.navbar-left {
+  flex: 0.47;
+  text-align: center;
+  transition: flex 0.3s;
+}
+.navbar-left-sc {
+  flex: 0.39;
+  text-align: center;
+  transition: flex 0.3s;
+}
+
+.navbar-center {
+  flex: 1;
+}
+
+.navbar-center a {
+  margin: 0 60px;
+}
+
+.navbar-right {
+  float: right;
+  padding-right: 20px;
+}
+
+
+.get-tickets-button {
+    text-align: center;
+    font-size: 15px;
+    background: linear-gradient(90deg, rgba(214,81,19,1) 0%, rgba(170,66,66,1) 100%);
+    color: white;
+    border: none;
+    cursor: pointer;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 100px;
+    background-color: #00F27E;
+    transition: all 0.4s ease-in;
+
+}
+
+.get-tickets-button:hover {
+    background-color: #00FFE0;
+}
+
+
+.content {
+  font-family: Montserrat;
+  margin-top: 200px;
+  padding-left: 100px;
+}
+
+.about {
+  height: 880px;
+  background: green;
+}
+
+.contact {
+  height: 880px;
+  background: tomato;
+}
+
+
+.lynx {
+  font-weight: bold;
+  font-size: 150px;
+  padding: 5px;
+}
+
+.expo {
+  font-size: 150px;
+}
+
+.S2023 {
+  font-weight: bold;
+  color:#ff7676;
+  font-size: 120px;
+  padding: 20px;
+}
