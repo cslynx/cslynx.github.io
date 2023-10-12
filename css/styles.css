@@ -29,8 +29,12 @@
   src: url('./fonts/Montserrat-SemiBold.ttf');
 }
 
+@font-face {
+  font-family: bold;
+  src: url('./fonts/Montserrat-Bold.ttf');
+}
+
 body {
-  font-family: regular;
   background: url('../images/bg1.png');
   color: white;
   background-size: contain;
@@ -46,10 +50,8 @@ p {
 
 
 
-
 .navbar {
   text-transform: uppercase;
-
   overflow: hidden;
   position: fixed;
   width: 100%;
@@ -162,7 +164,6 @@ p {
 
 
 .content {
-  font-family: Montserrat;
   margin-top: 200px;
   padding-left: 100px;
 }
@@ -179,19 +180,20 @@ p {
 
 
 .lynx {
-  font-weight: bold;
+  font-family: bold;
   font-size: 150px;
-  padding: 5px;
+
 }
 
 .expo {
-  font-size: 150px;
+  font-family: regular;
+  font-size: 140px;
 }
 
 .S2023 {
-  font-weight: bold;
+  font-family: semibold;
+  letter-spacing: 5px;
   color:#ff7676;
   font-size: 120px;
   padding: 20px;
 }
-
