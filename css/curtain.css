@@ -1,6 +1,6 @@
 /* Curtain animation */
 
-@import url(https://fonts.googleapis.com/css?family=Nunito:400,700,300);
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700,300');
 
 .curtain {
   width: 100%;
@@ -18,8 +18,6 @@
 
 .curtain-panel {
   display: flex;
-  font-family: boldblack;
-  font-size: 2.5vw;
   background: #1d2021;
   width: 50%;
   height: 100vh;
