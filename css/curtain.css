@@ -80,8 +80,8 @@
   top: 0;
   bottom: 0;
   margin: auto;
-  transform: scale(1.9);
-  color: #f9f9f9;
+  transform: scale(3.9);
+  color: white;
   transition: all 0.3s ease;
   opacity: 0;
 }
@@ -89,13 +89,15 @@
   .buttonContainer 
   .complete.fadein {
     opacity: 1;
-    transform: scale(1.5);
+    transform: scale(2.9);
   }
   .buttonContainer #counter {
-    color: #00fffc;
-    font-size: 19px;
-    left: 0; right: 0;
-    bottom: 20px; margin: auto;
+    color: white;
+    font-size: 29px;
+    left: 3%;
+    right: 0;
+    bottom: 30px;
+    margin: auto;
     display: none;
     position: absolute;
   }
@@ -104,15 +106,13 @@
     position: absolute;
     left: 0;
     right: 0;
-    top: -26px;
+    top: -37px;
     margin: auto;
     width: 40px;
     height: 40px;
     border-radius: 40px;
-    background-color:#00fffc;
-    box-shadow: inset 1px 
-    1px 1px 0px
-    rgba(255, 255, 255, 0.54);
+    background-color:white;
+    box-shadow: inset 1px 1px 1px 0px rgba(255, 255, 255, 0.54);
     display: none;
   }
 
@@ -120,11 +120,15 @@
   content: "Click to Reveal";
   display: block;
   text-transform: uppercase;
-  color: #00fffc;
+  color: white;
   font-weight: 700;
-  font-size: 13px;
+  font-size: 23px;
   transform: translateY(38px);
   transition: all 0.2s ease;
+  position: absolute;
+  text-align: center;
+  left: 17.5%;
+  top: -2.5%;
 }
 
   .buttonContainer.active {
@@ -163,7 +167,7 @@
   transform-origin: 50% 50%;
   transition: all 0.4s 
   cubic-bezier(0.18, 0.89, 0.32, 1.28);
-  stroke: #00fffc; /* Change the stroke color to #00fffc */
+  stroke: white; /* Change the stroke color to #00fffc */
     }
 
 @-webkit-keyframes jump {
