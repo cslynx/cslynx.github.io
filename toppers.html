@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.dots.min.js"></script>
+  <header class="navbar" id="navbar">
+    <div class="navbar-left" id="navbar-left">
+      <a href="/" class="logo">LYNX</a>
+    </div>
+    <div class="navbar-center">
+      <a class="navbar-links" href="/" id="home" onclick="activateLink('home')">Home</a>
+      <a class="navbar-links" href="/" id="about" onclick="activateLink('about')">About</a>
+      <a class="navbar-links" href="/" id="contact" onclick="activateLink('contact')">Contact</a>
+      <a href="/toppers.html" class="navbar-links" id="toppers">Toppers</a>
+      <a href="/events.html" class="navbar-links" id="events">Events</a>
+    </div>
+    <div class="navbar-right">
+      <a href="#tickets" class="get-tickets-button">&nbsp&nbspLogin&nbsp&nbsp</a>
+    </div>
+  </header>
+
+  <main class="section">
+    <h2 class="section-title">Academic Toppers</h2>
+    <div class="toppers">
+      <div class="topper-card">
+        <img src="images/toppers/flickson.jpeg" alt="Flickson">
+        <center>
+          <h6 class="topper-name">Flickson</h6>
+        </center>
+        <div class="card-text">
+          <center>Batch Year:</center>
+          <center>CGPA:</center>
+          <center>Rank:</center>
+        </div>
+      </div>
+      <div class="topper-card">
+        <img src="images/toppers/keerthi.jpeg" alt="Keerthi">
+        <center>
+          <h6 class="topper-name">Keerthi</h6>
+        </center>
+        <div class="card-text">
+          <center>Batch Year:</center>
+          <center>CGPA:</center>
+          <center>Rank:</center>
+        </div>
+      </div>
+      <div class="topper-card">
+        <img src="images/toppers/swathi.jpeg" alt="Swathi">
+        <center>
+          <h6 class="topper-name">Swathi</h6>
+        </center>
+        <div class="card-text">
+          <center>Batch Year:</center>
+          <center>CGPA:</center>
+          <center>Rank:</center>
+        </div>
+      </div>
+      <div class="topper-card">
+        <img src="images/toppers/junior-payyan.jpeg" alt="Unknown">
+        <center>
+          <h6 class="topper-name">Unknown</h6>
+        </center>
+        <div class="card-text">
+          <center>Batch Year:</center>
+          <center>CGPA:</center>
+          <center>Rank:</center>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="./js/script.js"></script>
+  <script>
+    VANTA.DOTS({
+      el: "main",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      size: 2.60,
+      spacing: 16.00,
+      showLines: false,
+    })
+  </script>
+</body>
+
+</html>

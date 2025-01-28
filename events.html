@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.dots.min.js"></script>
+
+  <header class="navbar" id="navbar">
+    <div class="navbar-left" id="navbar-left">
+      <a href="/" class="logo">LYNX</a>
+    </div>
+    <div class="navbar-center">
+      <a class="navbar-links" href="/" id="home" onclick="activateLink('home')">Home</a>
+      <a class="navbar-links" href="/" id="about" onclick="activateLink('about')">About</a>
+      <a class="navbar-links" href="/" id="contact" onclick="activateLink('contact')">Contact</a>
+      <a href="/toppers.html" class="navbar-links" id="toppers">Toppers</a>
+      <a href="/events.html" class="navbar-links" id="events">Events</a>
+    </div>
+    <div class="navbar-right">
+      <a href="#tickets" class="get-tickets-button">&nbsp&nbspLogin&nbsp&nbsp</a>
+    </div>
+  </header>
+
+  <main class="section">
+    <h2 class="section-title">Events</h2>
+
+    <div class="events">
+      <div class="event-section">
+        <img src="images/events/flutter.jpg" alt="flutter">
+        <div>
+          <h6 class="event-title">Workshop on Flutter</h6>
+          <p class="event-content">A two-day Flutter workshop was conducted at Mar Ivanios College by the department of
+            Computer Science in
+            association with ICFOSS on February 29 and March 1, 2024, tailored for S4 Computer Science students to
+            enhance their mobile application development skills. The workshop, led by Mr. K S Abhishek, a dedicated
+            Flutter Developer, commenced with an introductory speech by Flickson J, expressing excitement to welcome Mr.
+            Abhishek and highlighting his expertise in crafting exceptional user experiences. Mr. Abhishek's sessions
+            covered a range of topics, including setting up a Flutter project, Dart programming basics, and advanced
+            options in VSCode for Flutter development. His hands-on approach, where he personally assisted each
+            participant and addressed their queries, was highly appreciated. The workshop, held at the Computer Science
+            Department Lab, provided a conducive environment for collaborative learning, enabling participants to engage
+            in practical exercises and exchange ideas. The event's success was attributed to Mr. Abhishek's exceptional
+            training, the faculty's support, and the enthusiastic participation of the students. The vote of thanks was
+            delivered by Hanan Faiza N, who expressed gratitude to Mr. Abhishek, the faculty, and the participants for
+            making the workshop a memorable and enriching experience.
+
+          </p>
+        </div>
+      </div>
+
+      <div class="event-section">
+        <!-- <img src="" alt="National Symposium on Language Computing"> -->
+        <div>
+          <h6 class="event-title">National Symposium on Language Computing</h6>
+          <p class="event-content">The symposium on language computing, organized by the Departments of Computer Science
+            and Malayalam at Mar Ivanios College, in collaboration with ICFOSS, was held from January 23 to 25, 2024.
+            The event began with an inaugural ceremony featuring speeches by prominent academicians and experts,
+            including Dr. Sunil TT from ICFOSS. Sessions covered a range of topics, such as recent advancements in
+            language technology by Dr. Nisha Varghese, text classification by Dr. Sweety Bakyarani, and named entity
+            recognition by Ms. M Ramla. Workshops on LaTeX and research paper preparation were conducted by Ms.
+            Meharuniza Nazeem and Ms. Arya Sreekumar. The final day included a session on the future of language
+            technologies by Dr. Rajeev RR and concluded with a closing ceremony highlighting the symposium's educational
+            significance and its role in advancing language computing for Indian languages, particularly Malayalam. </p>
+        </div>
+      </div>
+    </div>
+
+
+  </main>
+
+  <script src="./js/script.js"></script>
+  <script>
+    VANTA.DOTS({
+      el: "main",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      size: 2.60,
+      spacing: 16.00,
+      showLines: false,
+    })
+  </script>
+</body>
+
+</html>

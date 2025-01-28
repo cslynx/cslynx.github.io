@@ -35,42 +35,32 @@
 }
 
 body {
-  background: url('../images/bg1.webp');
   color: white;
-  background-size: contain;
-  background-repeat: no-repeat;
+  height: 100vh;
 }
-
-
-p {
-  text-align: left;
-  line-height: 70px;
-  margin-bottom:70px;
-}
-
-
 
 .navbar {
   text-transform: uppercase;
   overflow: hidden;
   position: fixed;
   width: 100%;
-  background: linear-gradient(90deg, rgba(2, 0, 36, 0.1) 0%, rgba(0,22,81,0.1) 100%);
+  background: linear-gradient(90deg, rgba(2, 0, 36, 0.1) 0%, rgba(0, 22, 81, 0.1) 100%);
   padding: 20px;
   top: 0;
-  left:0;
-  right:0;
+  left: 0;
+  right: 0;
   margin: 0 auto 0 auto;
   text-align: center;
   display: flex;
   justify-content: space-between;
   align-items: center;
   transition: transform 0.5s, border-radius 0.5s, width 0.5s, box-shadow 0.5s, background 0.1s;
+  z-index: 999;
 }
 
 .scrolled {
   transform: translateY(30%);
-  background: linear-gradient(90deg, rgba(0,2,30, 0.97) 0%, rgba(5,12,61,0.97) 100%);
+  background: linear-gradient(90deg, rgba(0, 2, 30, 0.97) 0%, rgba(5, 12, 61, 0.97) 100%);
   width: 80%;
   border-radius: 50px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
@@ -81,7 +71,8 @@ p {
   float: left;
   color: white;
   text-align: center;
-  padding: 12px;
+  padding-top: 12px;
+  padding-bottom: 12px;
   text-decoration: none;
   font-size: 15px;
   line-height: 25px;
@@ -93,7 +84,7 @@ p {
 .navbar-center a {
   text-decoration: none;
   color: white;
-  background-image: linear-gradient(white,white);
+  background-image: linear-gradient(white, white);
   background-size: 0 2px, auto;
   background-repeat: no-repeat;
   background-position: center bottom;
@@ -123,6 +114,7 @@ p {
   text-align: center;
   transition: flex 0.3s;
 }
+
 .navbar-left-sc {
   flex: 0.39;
   text-align: center;
@@ -130,7 +122,8 @@ p {
 }
 
 .navbar-center {
-  flex: 1;
+  display: flex;
+  justify-content: space-around;
 }
 
 .navbar-center a {
@@ -144,22 +137,22 @@ p {
 
 
 .get-tickets-button {
-    text-align: center;
-    font-size: 15px;
-    background: linear-gradient(90deg, rgba(214,81,19,1) 0%, rgba(170,66,66,1) 100%);
-    color: white;
-    border: none;
-    cursor: pointer;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: 100px;
-    background-color: #00F27E;
-    transition: all 0.4s ease-in;
+  text-align: center;
+  font-size: 15px;
+  background: linear-gradient(90deg, rgba(214, 81, 19, 1) 0%, rgba(170, 66, 66, 1) 100%);
+  color: white;
+  border: none;
+  cursor: pointer;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 100px;
+  background-color: #00F27E;
+  transition: all 0.4s ease-in;
 
 }
 
 .get-tickets-button:hover {
-    background-color: #00FFE0;
+  background-color: #00FFE0;
 }
 
 
@@ -168,16 +161,95 @@ p {
   padding-left: 100px;
 }
 
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.4em;
+  color: #fcfbfc;
+  padding: 10%;
+}
+
 .about {
   height: 880px;
-  background: green;
+  background: #1d2021;
+  gap: 50px;
+}
+
+.section-title {
+  font-size: 2.8em;
+  font-family: semibold;
+  justify-self: start;
+  margin-bottom: 50px;
+}
+
+.about p {
+  font-family: regular;
 }
 
 .contact {
-  height: 880px;
-  background: tomato;
+  padding: 10px;
+  background: rgb(34, 36, 48);
 }
 
+.contact-content {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  font-family: regular;
+}
+
+.contact-details {
+  text-align: left;
+}
+
+.contact-form {
+  width: 20%;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.form-group textarea {
+  resize: none;
+  height: 100px;
+}
+
+.form-group button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  width: 100%;
+}
+
+.form-group button:hover {
+  background-color: #0056b3;
+}
 
 .lynx {
   font-family: bold;
@@ -193,7 +265,69 @@ p {
 .S2023 {
   font-family: semibold;
   letter-spacing: 5px;
-  color:#ff7676;
+  color: #ff7676;
   font-size: 120px;
   padding: 20px;
+}
+
+.toppers {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+}
+
+.topper-card {
+  border: 1px #ff8820 solid;
+  border-radius: 7px;
+  padding: 3px;
+  background: #1d2021;
+  color: #ffebdb;
+}
+
+.topper-card .topper-name {
+  font-family: semibold;
+  font-size: 1.7rem;
+}
+
+.topper-card .card-text {
+  font-size: 1.1rem;
+  margin-top: 7px;
+}
+
+.topper-card img {
+  max-height: 300px;
+}
+
+.events {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.event-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  background: rgba(1, 1, 1, 0.5);
+  padding: 50px;
+  border: 1px #ff8820 solid;
+  border-radius: 10px;
+}
+
+.event-section .event-title {
+  font-family: semibold;
+  font-size: 1.7rem;
+  padding-bottom: 50px;
+}
+
+.event-section .event-content {
+  font-family: regular;
+  font-size: 1.2rem;
+}
+
+.event-section img {
+  max-height: 500px;
 }

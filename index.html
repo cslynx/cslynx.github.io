@@ -1,116 +1,135 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="./css/styles.css">
 
-<!-- @TODO: Remove after launch -->
-  <link rel="stylesheet" href="./css/curtain.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-<!---->
-
   <title>Lynx</title>
 </head>
-<body>
 
-    <!-- Curtain Start -->
-    <div class="curtain">
-      <div class="curtain-wrapper">
-        <div class="buttonContainer">
-          <div class="complete">Presenting to you...</div>
-          <div class="ball"></div>
-          <svg viewBox="0 0 182 61" width="300" height="100" xmlns="http://www.w3.org/2000/svg">
-            <path id="button" d="m31.048188,4.720621l120.048623,0l0,0c15.726711,0 28.475699,11.640603 28.475699,26.000007c0,14.359399 -12.748994,25.999997 -28.475699,25.999997l-120.048623,0l0,0c-15.726693,0 -28.475699,-11.640598 -28.475699,-25.999997c0,-14.359409 12.749006,-26.000007 28.475699,-26.000007z" stroke-width="4" stroke="#e91d62" fill="none"/>
-          </svg>
-          <div id="counter">0</div>
-        </div>
-        <div class="curtain-panel panel-left"></div>
-        <div class="curtain-panel panel-right"></div>
-      </div>
-    </div>
-    <!-- Curtain End -->
+<body style="background: url('../images/bg1.webp');background-size: 100vw;background-repeat: no-repeat;">
 
   <header class="navbar" id="navbar">
-    <div class="navbar-left"  id="navbar-left">
-      <a href="#default" class="logo">LYNX</a>
+    <div class="navbar-left" id="navbar-left">
+      <a href="/" class="logo">LYNX</a>
     </div>
     <div class="navbar-center">
       <a class="navbar-links" href="#home" id="home" onclick="activateLink('home')">Home</a>
       <a class="navbar-links" href="#about" id="about" onclick="activateLink('about')">About</a>
       <a class="navbar-links" href="#contact" id="contact" onclick="activateLink('contact')">Contact</a>
+      <a href="/toppers.html" class="navbar-links" id="toppers">Toppers</a>
+      <a href="/events.html" class="navbar-links" id="events">Events</a>
     </div>
     <div class="navbar-right">
       <a href="#tickets" class="get-tickets-button">&nbsp&nbspLogin&nbsp&nbsp</a>
     </div>
   </header>
 
-<main>
-  <div class="content">
-    <p>
-      <span class="lynx">LYNX</span><br>
-      <span class="expo">ASSOCIATION</span><br>
-      <span class="S2023">2024</span><br>
-    <p>
-    <p>
+  <main>
+    <div class="content">
+      <p>
+        <span class=" lynx">LYNX</span><br>
+        <span class="expo">ASSOCIATION</span><br>
+        <span class="S2023">2024</span><br>
+      <p>
+      <p>
         &nbsp
-    </p>
-    <p>
+      </p>
+      <p>
         &nbsp
-    </p>
-  </div>
-  <section class="about">
+      </p>
+    </div>
+    <section class="about section">
+      <h3 class="section-title">About</h3>
+      <p>
+        Welcome to Lynx, the official digital home of the Computer Science Department at Mar Ivanios College.
+        Established
+        as a hub for innovation and learning, our department prides itself on fostering academic excellence and
+        technological expertise. With a mission to prepare students for the challenges of the modern digital world, we
+        offer cutting-edge programs and hands-on experiences in software development, data science, and emerging
+        technologies. Our dedicated faculty, state-of-the-art facilities, and vibrant student community come together
+        to
+        create an environment of collaborative growth. Lynx serves as a gateway for students, alumni, and enthusiasts
+        to
+        explore departmental news, academic resources, and upcoming events. Join us in shaping the future of
+        technology,
+        one idea at a time.
+      </p>
+    </section>
 
-  </section>
+    <section class="contact section">
+      <h3 class="section-title">Contact</h3>
+      <div class="contact-content">
 
-  <section class="contact">
+        <div class="contact-details">
+          <p>
+            Ms. Tinu C Philip
+          </p>
+          <p>
+            Head of the Department
+          </p>
+          <p>
+            Department of Computer Science (SF)
+          </p>
+          <p>
+            Mar Ivanios College (Autonomous)
+          </p>
+          <p>
+            Thiruvananthapuram-695015
+          </p>
+          <p>
+            Kerala, India
+          </p>
+          <p>
+            E-mail: tinu.philip@mic.ac.in
+          </p>
+          <p>
+            Mobile: +91 9947268244
+          </p>
+        </div>
+        <div class="contact-form">
+          <form action="#">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Type your message" required></textarea>
+            </div>
+            <div class="form-group">
+              <button type="submit">Send Message</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
 
-  </section>
+  </main>
 
-</main>
+  <script src="./js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.11.3/lib/p5.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.trunk.min.js"></script>
 
-    <script src="./js/script.js"></script>
-
-    <!-- @TODO: Remove after launch-->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Include jQuery -->
-    
-    <script>
-      $('.buttonContainer').click(function(){
-	      if($('.buttonContainer').hasClass('active')){
-	      	$(this).removeClass('active');
-	      	$('.complete').removeClass('fadein');
-	      	$('#counter').fadeOut(100);
-	      	$('.ball').fadeOut(100);
-	      	count().stop;
-	      } else{
-	      	$(this).addClass('active');
-	      	$('#counter').fadeIn(200);
-	      	$('.ball').fadeIn(200);
-	      	count();
-	      }
-      });
-
-      //Loading
-      function count(){
-      	$({countNum: $('#counter').text()}).animate({countNum: 100}, {
-      	  duration: 2500,
-      	  easing:'linear',
-      	  step: function() {
-      		 $('#counter').text(Math.floor(this.countNum) + '%');
-      	  },
-      	  complete: function() {
-      		 $('#counter').fadeOut(200);
-      		 $('.complete').addClass('fadein');
-      		 $('.ball').fadeOut(200);
-      		  $('#button').fadeOut(100);
-      		  setTimeout(function() {
-      			  $('.complete').removeClass('fadein');
-              curtainRaise();
-         		}, 1000);
-      	  }
-      	});
-      }
-    </script>
-    <!---->
-
+  <script>
+    VANTA.TRUNK({
+      el: ".about",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      spacing: 0.50,
+      chaos: 1.50
+    })
+  </script>
 </body>
+
 </html>
