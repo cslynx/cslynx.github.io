@@ -37,6 +37,7 @@
 body {
   color: white;
   height: 100vh;
+  background: #1d2021;
 }
 
 .navbar {
@@ -325,7 +326,8 @@ body {
 
 .event-section .event-content {
   font-family: regular;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  text-align: justify;
 }
 
 .event-section img {
