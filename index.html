@@ -5,10 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="./css/styles.css">
 
+  <!-- @TODO: Remove after launch -->
+  <link rel="stylesheet" href="./css/curtain.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <!---->
+
   <title>Lynx</title>
 </head>
 
 <body style="background: url('../images/bg1.webp');background-size: 100vw;background-repeat: no-repeat;">
+
+  <!-- Curtain Start -->
+  <div class="curtain">
+    <div class="curtain-wrapper">
+      <div class="buttonContainer">
+        <div class="complete">Presenting to you...</div>
+        <div class="ball"></div>
+        <svg viewBox="0 0 182 61" width="300" height="100" xmlns="http://www.w3.org/2000/svg">
+          <path id="button"
+            d="m31.048188,4.720621l120.048623,0l0,0c15.726711,0 28.475699,11.640603 28.475699,26.000007c0,14.359399 -12.748994,25.999997 -28.475699,25.999997l-120.048623,0l0,0c-15.726693,0 -28.475699,-11.640598 -28.475699,-25.999997c0,-14.359409 12.749006,-26.000007 28.475699,-26.000007z"
+            stroke-width="4" stroke="#e91d62" fill="none" />
+        </svg>
+        <div id="counter">0</div>
+      </div>
+      <div class="curtain-panel panel-left"></div>
+      <div class="curtain-panel panel-right"></div>
+    </div>
+  </div>
+  <!-- Curtain End -->
 
   <header class="navbar" id="navbar">
     <div class="navbar-left" id="navbar-left">
@@ -115,6 +139,48 @@
   <script src="./js/script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/p5@1.11.3/lib/p5.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.trunk.min.js"></script>
+
+  <!-- @TODO: Remove after launch-->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Include jQuery -->
+
+  <script>
+    $('.buttonContainer').click(function () {
+      if ($('.buttonContainer').hasClass('active')) {
+        $(this).removeClass('active');
+        $('.complete').removeClass('fadein');
+        $('#counter').fadeOut(100);
+        $('.ball').fadeOut(100);
+        count().stop;
+      } else {
+        $(this).addClass('active');
+        $('#counter').fadeIn(200);
+        $('.ball').fadeIn(200);
+        count();
+      }
+    });
+
+    //Loading
+    function count() {
+      $({countNum: $('#counter').text()}).animate({countNum: 100}, {
+        duration: 2500,
+        easing: 'linear',
+        step: function () {
+          $('#counter').text(Math.floor(this.countNum) + '%');
+        },
+        complete: function () {
+          $('#counter').fadeOut(200);
+          $('.complete').addClass('fadein');
+          $('.ball').fadeOut(200);
+          $('#button').fadeOut(100);
+          setTimeout(function () {
+            $('.complete').removeClass('fadein');
+            curtainRaise();
+          }, 1000);
+        }
+      });
+    }
+  </script>
+  <!---->
 
   <script>
     VANTA.TRUNK({
